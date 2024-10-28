@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Menú de Proyectos{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Gestión de proyectos</h1>
+
+    <a class="btn btn-primary" href="{% url 'crear_proyecto' %}" role="button">Crear Proyecto</a>
+    <a class="btn btn-primary" href="{% url 'listar_proyectos' %}" role="button">Listar Proyectos</a>
+</div>
+{% endblock %}

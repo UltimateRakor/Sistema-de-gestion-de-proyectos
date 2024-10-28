@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Tareas{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Lista de Tareas</h1>
+
+    <ul>
+        {% for tarea in tareas %}
+            <li>{{ tarea.nombre }} - <a href="{% url 'eliminar_tarea' tarea.id %}">Eliminar</a></li>
+        {% empty %}
+            <li>No hay tareas disponibles.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

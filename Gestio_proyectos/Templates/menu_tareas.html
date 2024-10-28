@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Menú de Tareas{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Gestión de Tareas</h1>
+
+    <a class="btn btn-primary" href="{% url 'crear_tarea' %}" role="button">Crear Tarea</a>
+    <a class="btn btn-primary" href="{% url 'listar_tareas' %}" role="button">Listar Tareas</a>
+</div>
+{% endblock %}
